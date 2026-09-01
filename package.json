@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
+    "build": "vinext build && node scripts/prepare-hostinger-static.mjs",
     "preview": "vinext preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:static": "node --test tests/hostinger-output.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.0",
